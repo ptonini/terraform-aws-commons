@@ -20,7 +20,7 @@ module "cloudtrail" {
 
 module "s3_inventory_bucket" {
   source  = "ptonini/s3-bucket/aws"
-  version = "~> 1.0.0"
+  version = "~> 1.3.0"
   name    = "${var.bucket_name_prefix}-${var.account_name}-s3-inventories"
   bucket_policy_statements = [
     {
