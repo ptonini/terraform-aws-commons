@@ -14,10 +14,16 @@ variable "ssh_master_key" {
 
 variable "s3_encryption_key" {
   type = object({
-    description             = optional(string, "s3-encryption")
     enable_key_rotation     = optional(bool, true)
     deletion_window_in_days = optional(number, 10)
   })
   default = {}
 }
 
+variable "cloudwatch_encryption_key" {
+  type = object({
+    enable_key_rotation     = optional(bool, true)
+    deletion_window_in_days = optional(number, 10)
+  })
+  default = {}
+}
