@@ -126,7 +126,7 @@ module "s3_access_log_bucket" {
       Condition = {
         ArnLike = {
           "aws:SourceArn" = "arn:aws:s3:::*"
-        },
+        }
         StringEquals = {
           "aws:SourceAccount" = data.aws_caller_identity.current.account_id
         }
