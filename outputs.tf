@@ -3,11 +3,11 @@ output "ssh_master_key" {
 }
 
 output "s3_kms_key_arn" {
-  value = aws_kms_key.s3_encryption.arn
+  value = module.kms_key_s3.this.arn
 }
 
 output "cloudwatch_kms_key_id" {
-  value = aws_kms_key.cloudwatch_encryption.id
+  value = module.kms_key_cloudwatch.this.arn
 }
 
 output "s3_inventory_bucket_arn" {
